@@ -1,6 +1,6 @@
 {
   "name": "@so/utils",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "license": "MIT",
   "scripts": {
     "build:prod": "webpack --config webpack.config.js --env:prod",
