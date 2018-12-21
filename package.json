@@ -1,6 +1,6 @@
 {
-  "name": "@so/utils",
-  "version": "1.0.12",
+  "name": "@so/infr",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "build:prod": "webpack --config webpack.config.js --env:prod",
@@ -10,12 +10,16 @@
   "files": [
     "dist"
   ],
-  "main": "dist/main.js",
-  "typings": "dist/index.d.ts",
+  "browser": "dist/browser.js",
+  "node": "dist/node.js",
+  "typings": "dist/common/index.d.ts",
   "dependencies": {
+    "@so/di": "^1.0.7",
     "@types/luxon": "^1.4.1",
+    "fetch": "^1.1.0",
     "luxon": "^1.8.3",
-    "pako": "^1.0.7"
+    "pako": "^1.0.7",
+    "rxjs": "^6.3.3"
   },
   "devDependencies": {
     "@types/node": "^10.12.8",
