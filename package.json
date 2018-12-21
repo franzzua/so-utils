@@ -13,11 +13,11 @@
   "main": "dist/main.js",
   "typings": "dist/index.d.ts",
   "dependencies": {
+    "@types/luxon": "^1.4.1",
+    "luxon": "^1.8.3",
     "pako": "^1.0.7"
   },
   "devDependencies": {
-    "moment": "^2.22.2",
-    "moment-timezone": "^0.5.21",
     "@types/node": "^10.12.8",
     "awesome-typescript-loader": "^5.2.1",
     "tsickle": "^0.33.1",

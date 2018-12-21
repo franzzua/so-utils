@@ -1,18 +1,20 @@
 /**
  * Created by xamidylin on 2017-01-23.
  */
-import {Moment} from './moment';
-export {Moment} from './moment';
+import {DateTime} from 'luxon';
 
-const moment = require('moment/moment.js');
-
-require('moment-timezone/builds/moment-timezone-with-data-2012-2022.min.js');
-
-export function utc(d: (Date | any | number | string) = new Date()): Moment {
-  return moment['tz'](d, 'utc');
+export function utc(d: (Date | number | string) = undefined): DateTime {
+  if (typeof d === "string"){
+    return DateTime.fromISO(d);
+  }
+  if (typeof d === "number") {
+    return DateTime.utc(d);
+  }
+  if (d instanceof Date){
+    return DateTime.utc(+d);
+  }
 }
 
 export function utcToday() {
-  const now = utc();
-  return now.hour(0).minute(0).second(0).millisecond(0);
+  return utc().startOf('day');
 }
